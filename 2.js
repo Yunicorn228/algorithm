@@ -200,19 +200,19 @@
 
 // console.log(sameCollaps([1, 3, 3, 3, 1, 5, 6, 7, 8, 1]));
 
-const fibonacci = n => {
-  if (n <= 2) {
-    return 1;
-  }
+// const fibonacci = n => {
+//   if (n <= 2) {
+//     return 1;
+//   }
 
-  let fibo = [0, 1];
-  for (let i = 2; i <= n + 1; i++) {
-    fibo[i] = fibo[i - 1] + fibo[i - 2];
-  }
-  return fibo[n + 1];
-};
+//   let fibo = [0, 1];
+//   for (let i = 2; i <= n + 1; i++) {
+//     fibo[i] = fibo[i - 1] + fibo[i - 2];
+//   }
+//   return fibo[n + 1];
+// };
 
-console.log(fibonacci(12));
+// console.log(fibonacci(12));
 
 // const sameCollaps = arr => {
 //   let ele = "";
@@ -231,12 +231,32 @@ console.log(fibonacci(12));
 
 // console.log(sameCollaps([1, 3, 3, 3, 1, 5, 6, 7, 8, 1]));
 
-const fiborec = n => {
-  if (n <= 1) {
-    return 1;
-  } else {
-    return fiborec(n - 1) + fiborec(n - 2);
+// const fiborec = n => {
+//   if (n <= 1) {
+//     return 1;
+//   } else {
+//     return fiborec(n - 1) + fiborec(n - 2);
+//   }
+// };
+
+// console.log(fiborec(12));
+
+const greatestCommonDivisor = (a, b) => {
+  if (a % b === 0) {
+    return b;
   }
+
+  if (b % a === 0) {
+    return a;
+  }
+
+  let ans = [];
+  for (let i = 1; i < a; i++) {
+    if (a % i === 0 && b % i === 0) {
+      ans.push(i);
+    }
+  }
+  return ans[ans.length - 1];
 };
 
-console.log(fiborec(12));
+console.log(greatestCommonDivisor(-69, 169));
