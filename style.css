@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div {
+  height: 100px;
+  width: 100px;
+  background-color: aqua;
+}
+
+.even {
+  height: 100px;
+  width: 100px;
+  background-color: greenyellow;
+}

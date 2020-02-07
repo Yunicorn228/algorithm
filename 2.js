@@ -1,0 +1,215 @@
+// //-------binary search
+// function binar(arr, x) {
+//   let start = 0,
+//     end = arr.length - 1;
+
+//   while (start <= end) {
+//     mid = Math.round((start + end) / 2);
+//     if (x === arr[mid]) {
+//       return true;
+//     } else if (arr[mid] < x) {
+//       start = mid + 1;
+//     } else {
+//       end = mid - 1;
+//     }
+//   }
+//   return false;
+// }
+// console.log(binar([1, 2, 3, 4, 5, 6, 7, 8], 9));
+
+// // ----------prime
+// function isPri(n) {
+//   if (n < 2) return false;
+//   var div = 2;
+
+//   while (n > div) {
+//     if (n % div == 0) {
+//       return false;
+//     } else {
+//       div++;
+//     }
+//   }
+//   return true;
+// }
+// console.log(isPri(1));
+
+// //------------prime factor
+// function prifac(n) {
+//   var an = [],
+//     div = 2;
+//   while (n > 2) {
+//     if (n % div == 0) {
+//       an.push(div);
+//       n = n / div;
+//     } else {
+//       div++;
+//     }
+//   }
+//   return an;
+// }
+
+// console.log(prifac(56));
+
+// //--------------fibonacci
+// function fibo(n) {
+//   var arr = [0, 1];
+//   if (n <= 2) {
+//     return 1;
+//   }
+
+//   for (var i = 2; i <= n; i++) {
+//     arr[i] = arr[i - 1] + arr[i - 2];
+//   }
+//   return arr[n];
+// }
+// console.log(fibo(12));
+
+// //----------------fibonacci recursive
+// function fibonacci(n) {
+//   if (n <= 1) return n;
+//   else return fibonacci(n - 1) + fibonacci(n - 2);
+// }
+// console.log(fibonacci(12));
+
+// //-----------greatest common divisor
+// function greatestCommonDivisor(a, b) {
+//   var div = 2,
+//     grediv = 1;
+
+//   if (a < 2 || b < 2) return 1;
+
+//   while (a >= div && b >= div) {
+//     if (a % div == 0 && b % div == 0) {
+//       grediv = div;
+//     }
+//     div++;
+//   }
+//   return grediv;
+// }
+// console.log(greatestCommonDivisor(14, 21));
+
+// //------------------remove duplicate
+// function remDup(arr) {
+//   var exists = {},
+//     an = [],
+//     ele;
+
+//   for (var i = 0; i < arr.length; i++) {
+//     ele = arr[i];
+//     if (!exists[ele]) {
+//       an.push(ele);
+//       exists[ele] = true;
+//     }
+//   }
+//   return an;
+// }
+// console.log(remDup([1, 3, 3, 3, 1, 5, 6, 7, 8, 1]));
+
+// //------------------mergesortedarray
+// function msa(arr1, arr2) {
+//   var ans = [],
+//     ele1 = arr1[0],
+//     ele2 = arr2[0],
+//     i = 1,
+//     j = 1;
+
+//   if (arr1.length == 0) return arr2;
+//   if (arr2.length == 0) return arr1;
+
+//   while (ele1 || ele2) {
+//     if ((ele1 && !ele2) || ele1 < ele2) {
+//       ans.push(ele1);
+//       ele1 = arr1[i++];
+//     } else {
+//       ans.push(ele2);
+//       ele2 = arr2[j++];
+//     }
+//   }
+//   return ans;
+// }
+// console.log(msa([2, 5, 6, 9], [1, 2, 3, 29]));
+
+// //----------------------swap number
+// function sn(a, b) {
+//   b = b - a; // 3 - 2 b=1
+//   a = a + b; // 2 + 1 a=3
+//   b = a - b; // 3 - 1 b=2
+//   return [a, b];
+// }
+// console.log(sn(2, 1));
+
+// // ----------------------reverse string
+// function rs(str) {
+//   var ans = "";
+//   for (i = str.length - 1; i >= 0; i--) {
+//     ans += str[i];
+//   }
+//   return ans;
+// }
+
+// console.log(rs("zhao zhi yuan shi da mei nv"));
+
+//----------------------------
+
+// const isPrime = num => {
+//   if (num == 2) {
+//     return true;
+//   }
+//   if (num < 2) {
+//     return false;
+//   }
+
+//   for (let i = 2; i < num; i++) {
+//     if (num % i == 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+// console.log(isPrime(2));
+
+// const binarySearch = (arr, x) => {
+//   let start = arr[0];
+//   let end = arr[arr.length - 1];
+
+//   while (end > start) {
+//     let mid = Math.round((start + end) / 2);
+//     if (mid === x) {
+//       return true;
+//     } else if (mid > x) {
+//       end = mid - 1;
+//     } else if (mid < x) {
+//       start = mid + 1;
+//     }
+//   }
+//   return false;
+// };
+
+// console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8], 9));
+
+// const sameCollaps = arr => {
+//   const ans = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] !== arr[i - 1]) {
+//       ans.push(arr[i]);
+//     }
+//   }
+//   return ans;
+// };
+
+// console.log(sameCollaps([1, 3, 3, 3, 1, 5, 6, 7, 8, 1]));
+
+const fibonacci = n => {
+  if (n <= 2) {
+    return 1;
+  }
+
+  let fibo = [0, 1, 1];
+  for (let i = 2; i <= n; i++) {
+    fibo[i] = fibo[i - 1] + fibo[i - 2];
+  }
+  return fibo[n];
+};
+
+console.log(fibonacci(12));
