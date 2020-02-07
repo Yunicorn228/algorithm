@@ -110,8 +110,8 @@
 //   var ans = [],
 //     ele1 = arr1[0],
 //     ele2 = arr2[0],
-//     i = 1,
-//     j = 1;
+//     i = 0,
+//     j = 0;
 
 //   if (arr1.length == 0) return arr2;
 //   if (arr2.length == 0) return arr1;
@@ -241,22 +241,66 @@
 
 // console.log(fiborec(12));
 
-const greatestCommonDivisor = (a, b) => {
-  if (a % b === 0) {
-    return b;
-  }
+// const greatestCommonDivisor = (a, b) => {
+//   if (a % b === 0) {
+//     return b;
+//   }
 
-  if (b % a === 0) {
-    return a;
-  }
+//   if (b % a === 0) {
+//     return a;
+//   }
 
-  let ans = [];
-  for (let i = 1; i < a; i++) {
-    if (a % i === 0 && b % i === 0) {
-      ans.push(i);
-    }
+//   let ans = [];
+//   for (let i = 1; i < a; i++) {
+//     if (a % i === 0 && b % i === 0) {
+//       ans.push(i);
+//     }
+//   }
+//   return ans[ans.length - 1];
+// };
+
+// console.log(greatestCommonDivisor(-69, 169));
+
+// const mergesortedarray = (arrA, arrB) => {
+//   let a = arrA[0];
+//   let b = arrB[0];
+//   let i = 1;
+//   let j = 1;
+//   let ans = [];
+
+//   while (i < arrA.length && j < arrB.length) {
+//     if (a < b) {
+//       ans.push(a);
+//       a = arrA[i++];
+//       i++;
+//     } else {
+//       ans.push(b);
+//       b = arrB[i++];
+//       j++;
+//     }
+//   }
+//   return ans;
+// };
+
+// console.log(mergesortedarray([2, 5, 6, 9], [1, 2, 3, 29]));
+
+// const reverseStr = str => {
+//   let answer = "";
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     answer += str[i];
+//   }
+//   return answer;
+// };
+
+// console.log(reverseStr("bao bao zi la"));
+
+const reverseWord = str => {
+  words = str.split(" ");
+  answer = [];
+  for (let i = words.length - 1; i >= 0; i--) {
+    answer.push(words[i]);
   }
-  return ans[ans.length - 1];
+  return answer.join(" ");
 };
 
-console.log(greatestCommonDivisor(-69, 169));
+console.log(reverseWord("bao bao zi le"));
