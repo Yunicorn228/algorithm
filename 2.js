@@ -200,36 +200,43 @@
 
 // console.log(sameCollaps([1, 3, 3, 3, 1, 5, 6, 7, 8, 1]));
 
-// const fibonacci = n => {
-//   if (n <= 2) {
-//     return 1;
-//   }
-
-//   let fibo = [0, 1, 1];
-//   for (let i = 2; i <= n; i++) {
-//     fibo[i] = fibo[i - 1] + fibo[i - 2];
-//   }
-//   return fibo[n];
-// };
-
-// console.log(fibonacci(12));
-
-
-
-
-const sameCollaps = arr => {
-  let ele = "";
-  let ans = [];
-  let exists = {};
-
-  for(let i=0; i < arr.length ; i++){
-    ele = arr[i];
-    if(!exists[ele]){
-      ans.push(ele);
-      exists[ele] = true;
-    }
+const fibonacci = n => {
+  if (n <= 2) {
+    return 1;
   }
-  return ans;
-}
 
-console.log(sameCollaps([1, 3, 3, 3, 1, 5, 6, 7, 8, 1]));
+  let fibo = [0, 1];
+  for (let i = 2; i <= n + 1; i++) {
+    fibo[i] = fibo[i - 1] + fibo[i - 2];
+  }
+  return fibo[n + 1];
+};
+
+console.log(fibonacci(12));
+
+// const sameCollaps = arr => {
+//   let ele = "";
+//   let ans = [];
+//   let exists = {};
+
+//   for(let i=0; i < arr.length ; i++){
+//     ele = arr[i];
+//     if(!exists[ele]){
+//       ans.push(ele);
+//       exists[ele] = true;
+//     }
+//   }
+//   return ans;
+// }
+
+// console.log(sameCollaps([1, 3, 3, 3, 1, 5, 6, 7, 8, 1]));
+
+const fiborec = n => {
+  if (n <= 1) {
+    return 1;
+  } else {
+    return fiborec(n - 1) + fiborec(n - 2);
+  }
+};
+
+console.log(fiborec(12));
