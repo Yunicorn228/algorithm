@@ -294,13 +294,30 @@
 
 // console.log(reverseStr("bao bao zi la"));
 
-const reverseWord = str => {
-  words = str.split(" ");
-  answer = [];
-  for (let i = words.length - 1; i >= 0; i--) {
-    answer.push(words[i]);
-  }
-  return answer.join(" ");
-};
+// const reverseWord = str => {
+//   words = str.split(" ");
+//   answer = [];
+//   for (let i = words.length - 1; i >= 0; i--) {
+//     answer.push(words[i]);
+//   }
+//   return answer.join(" ");
+// };
 
-console.log(reverseWord("bao bao zi le"));
+// console.log(reverseWord("bao bao zi le"));
+
+// const greatestCommonDivisor = (num1, num2) => {
+//   if (num1 < 2 || num2 < 2) {
+//     return 1;
+//   }
+//   let ans = 1;
+//   let div = 2;
+//   while (num1 >= div && num2 >= div) {
+//     if (num1 % div === 0 && num2 % div === 0) {
+//       ans = div;
+//     }
+//     div++;
+//   }
+//   return ans;
+// };
+
+// console.log(greatestCommonDivisor(14, 21));
