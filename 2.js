@@ -293,7 +293,15 @@
 // };
 
 // console.log(reverseStr("bao bao zi la"));
+// const reverseWord = str => {
+//   let wordArr = str.split(" ");
+//   const ans = wordArr.map(word => {
+//     return reverseStr(word);
+//   });
+//   return ans.join(" ");
+// };
 
+// console.log(reverseWord("bao bao zi la"));
 // const reverseWord = str => {
 //   words = str.split(" ");
 //   answer = [];
@@ -321,3 +329,48 @@
 // };
 
 // console.log(greatestCommonDivisor(14, 21));
+
+// const rmvSame = str => {
+//   let ans = [];
+//   let exist = {};
+//   let char;
+//   let letArr = str.split("");
+
+//   for (let i = 0; i < letArr.length; i++) {
+//     char = letArr[i];
+//     if (exist[char]) {
+//       exist[char]++;
+//     } else {
+//       exist[char] = 1;
+//     }
+//   }
+
+//   for (var j in exist) {
+//     if (exist[j] == 1) {
+//       ans.push(j);
+//     }
+//   }
+//   return ans.join("");
+// };
+
+// console.log(rmvSame("aaabbbc"));
+// // 先把str拆成字母放进arr中，然后选出字母存进obj中，如果有重复value++，最后用for in loop找出value 是1的key push进答案里。 妙啊~
+
+const findArr = (input, num) => {
+  //     const newArr = input.map((v, i) => {
+  //         if (+v === num) {
+  //             return i
+  //         }
+  //     });
+  //     return "Index of " + num + " is " + newArr.join('');
+  // };
+  let newArr = [];
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] === num) {
+      newArr.push(i);
+    }
+    return "Index of " + num + " is " + newArr.join("");
+  }
+};
+
+console.log(findArr([1, 2, 3, 4, 5], 5));
