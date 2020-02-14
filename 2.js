@@ -328,7 +328,7 @@
 //   return ans;
 // };
 
-// console.log(greatestCommonDivisor(14, 21));
+// // console.log(greatestCommonDivisor(14, 21));
 
 // const rmvSame = str => {
 //   let ans = [];
@@ -356,21 +356,34 @@
 // console.log(rmvSame("aaabbbc"));
 // // 先把str拆成字母放进arr中，然后选出字母存进obj中，如果有重复value++，最后用for in loop找出value 是1的key push进答案里。 妙啊~
 
-const findArr = (input, num) => {
-  //     const newArr = input.map((v, i) => {
-  //         if (+v === num) {
-  //             return i
-  //         }
-  //     });
-  //     return "Index of " + num + " is " + newArr.join('');
-  // };
-  let newArr = [];
-  for (let i = 0; i < input.length; i++) {
-    if (input[i] === num) {
-      newArr.push(i);
-    }
-    return "Index of " + num + " is " + newArr.join("");
-  }
-};
+// const findArr = (input, num) => {
+//   //     const newArr = input.map((v, i) => {
+//   //         if (+v === num) {
+//   //             return i
+//   //         }
+//   //     });
+//   //     return "Index of " + num + " is " + newArr.join('');
+//   // };
+//   let newArr = [];
+//   for (let i = 0; i < input.length; i++) {
+//     if (input[i] === num) {
+//       newArr.push(i);
+//     }
+//     return "Index of " + num + " is " + newArr.join("");
+//   }
+// };
 
-console.log(findArr([1, 2, 3, 4, 5], 5));
+// console.log(findArr([1, 2, 3, 4, 5], 5));
+const twoSum = (arr, num) => {
+  ans = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let l = i + 1; l < arr.length; l++) {
+      if (num === arr[i] + arr[l]) {
+        ans.push(i);
+        ans.push(l);
+      }
+    }
+  }
+  return ans;
+};
+console.log(twoSum([2, 3, 5, 8], 11));
