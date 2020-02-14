@@ -372,6 +372,21 @@
 //     return "Index of " + num + " is " + newArr.join("");
 //   }
 // };
+// // console.log(findArr([1, 2, 3, 4, 5], 5));
+
+// const twoSum = (arr, num) => {
+//   ans = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let l = i + 1; l < arr.length; l++) {
+//       if (num === arr[i] + arr[l]) {
+//         ans.push(i);
+//         ans.push(l);
+//       }
+//     }
+//   }
+//   return ans;
+// };
+// console.log(twoSum([2, 3, 5, 8], 11));
 
 // // console.log(findArr([1, 2, 3, 4, 5], 5));
 // const twoSum = (arr, num) => {
