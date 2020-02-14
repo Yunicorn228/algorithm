@@ -374,7 +374,7 @@
 // };
 // // console.log(findArr([1, 2, 3, 4, 5], 5));
 
-// const twoSum = (arr, num) => {
+// const twoSum = (arr, num) => {------------------------------------------
 //   ans = [];
 //   for (let i = 0; i < arr.length; i++) {
 //     for (let l = i + 1; l < arr.length; l++) {
