@@ -388,16 +388,26 @@
 // };
 // console.log(twoSum([2, 3, 5, 8], 11));
 
-const isPalindrome = str => {
-  let strArr = str.split("");
-  for (let i = 0; i < strArr.length; i++) {
-    if (strArr[i] === strArr[strArr.length - 1 - i]) {
-      return true;
-    } else {
-      return false;
+// const isPalindrome = str => {
+//   let strArr = str.split("");
+//   for (let i = 0; i < strArr.length; i++) {
+//     if (strArr[i] === strArr[strArr.length - 1 - i]) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }
+// };
+
+// console.log(isPalindrome("racecar"));
+// console.log(isPalindrome("toyota"));
+
+const missingNum = arr => {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] + 1 !== arr[i + 1]) {
+      return arr[i] + 1;
     }
   }
 };
 
-console.log(isPalindrome("raceca"));
-console.log(isPalindrome("toyota"));
+console.log(missingNum([1, 2, 3, 5, 6]));
