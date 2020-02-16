@@ -387,3 +387,17 @@
 //   return ans;
 // };
 // console.log(twoSum([2, 3, 5, 8], 11));
+
+const isPalindrome = str => {
+  let strArr = str.split("");
+  for (let i = 0; i < strArr.length; i++) {
+    if (strArr[i] === strArr[strArr.length - 1 - i]) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+};
+
+console.log(isPalindrome("raceca"));
+console.log(isPalindrome("toyota"));
