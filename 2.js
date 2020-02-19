@@ -436,3 +436,25 @@
 // 	return false;
 // };
 // console.log(twoSum([1, 2, 3, 4, 5], 10));
+
+const largestSum = arr => {
+	let first = arr[0];
+	let second = arr[1];
+
+	if (first < second) {
+		first = arr[1];
+		second = arr[0];
+	}
+
+	for (let i = 2; i < arr.length; i++) {
+		if (arr[i] > first) {
+			second = first;
+			first = arr[i];
+		} else if (arr[i] > second) {
+			second = arr[i];
+		}
+	}
+	return first + second;
+};
+
+console.log(largestSum([1, 7, 3, 4, 5]));
