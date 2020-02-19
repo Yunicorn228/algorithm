@@ -402,12 +402,24 @@
 // console.log(isPalindrome("racecar"));
 // console.log(isPalindrome("toyota"));
 
-const missingNum = arr => {
-  for (let i = 0; i < arr.length - 1; i++) {
-    if (arr[i] + 1 !== arr[i + 1]) {
-      return arr[i] + 1;
-    }
-  }
-};
+// const missingNum = arr => {
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     if (arr[i] + 1 !== arr[i + 1]) {
+//       return arr[i] + 1;
+//     }
+//   }
+// };
 
-console.log(missingNum([1, 2, 3, 5, 6]));
+// console.log(missingNum([1, 2, 3, 5, 6]));
+// sort array only
+
+const MissingNum = arr => {
+	let n = arr.length + 1;
+	let includeSum = (n * (n + 1)) / 2;
+	let sum = 0;
+	for (let i = 0; i < arr.length; i++) {
+		sum += arr[i];
+	}
+	return includeSum - sum;
+};
+console.log(MissingNum([1, 2, 3, 5, 6]));
