@@ -413,13 +413,26 @@
 // console.log(missingNum([1, 2, 3, 5, 6]));
 // sort array only
 
-const MissingNum = arr => {
-	let n = arr.length + 1;
-	let includeSum = (n * (n + 1)) / 2;
-	let sum = 0;
-	for (let i = 0; i < arr.length; i++) {
-		sum += arr[i];
-	}
-	return includeSum - sum;
-};
-console.log(MissingNum([1, 2, 3, 5, 6]));
+// const MissingNum = arr => {
+// 	let n = arr.length + 1;
+// 	let includeSum = (n * (n + 1)) / 2;
+// 	let sum = 0;
+// 	for (let i = 0; i < arr.length; i++) {
+// 		sum += arr[i];
+// 	}
+// 	return includeSum - sum;
+// };
+// console.log(MissingNum([1, 2, 3, 5, 6]));
+//have to start with one
+
+// const twoSum = (arr, num) => {
+// 	for (let i = 0; i < arr.length - 1; i++) {
+// 		for (let j = i + 1; j < arr.length; j++) {
+// 			if (arr[i] + arr[j] === num) {
+// 				return true;
+// 			}
+// 		}
+// 	}
+// 	return false;
+// };
+// console.log(twoSum([1, 2, 3, 4, 5], 10));
