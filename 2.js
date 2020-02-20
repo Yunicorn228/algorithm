@@ -437,24 +437,35 @@
 // };
 // console.log(twoSum([1, 2, 3, 4, 5], 10));
 
-const largestSum = arr => {
-	let first = arr[0];
-	let second = arr[1];
+// const largestSum = arr => {
+// 	let first = arr[0];
+// 	let second = arr[1];
 
-	if (first < second) {
-		first = arr[1];
-		second = arr[0];
-	}
+// 	if (first < second) {
+// 		first = arr[1];
+// 		second = arr[0];
+// 	}
 
-	for (let i = 2; i < arr.length; i++) {
-		if (arr[i] > first) {
-			second = first;
-			first = arr[i];
-		} else if (arr[i] > second) {
-			second = arr[i];
-		}
+// 	for (let i = 2; i < arr.length; i++) {
+// 		if (arr[i] > first) {
+// 			second = first;
+// 			first = arr[i];
+// 		} else if (arr[i] > second) {
+// 			second = arr[i];
+// 		}
+// 	}
+// 	return first + second;
+// };
+
+// console.log(largestSum([1, 7, 3, 4, 5]));
+
+const countingZero = num => {
+	let count = 0;
+	while (num > 0) {
+		count += Math.floor(num / 10);
+		num = num / 10;
 	}
-	return first + second;
+	return count;
 };
 
-console.log(largestSum([1, 7, 3, 4, 5]));
+console.log(countingZero(100));
