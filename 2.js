@@ -459,13 +459,14 @@
 
 // console.log(largestSum([1, 7, 3, 4, 5]));
 
-const countingZero = num => {
-	let count = 0;
-	while (num > 0) {
-		count += Math.floor(num / 10);
-		num = num / 10;
-	}
-	return count;
-};
+// const countingZero = num => {
+// 	let count = 0;
+// 	while (num > 0) {
+// 		count += Math.floor(num / 10);
+// 		num = num / 10;
+// 	}
+// 	return count;
+// };
 
-console.log(countingZero(100));
+// console.log(countingZero(100));
+// counting zero only 10% === 0
