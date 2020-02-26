@@ -505,11 +505,15 @@ const reverseNumber = num => {
 		ans.unshift('-');
 	} else if (num % 10 === 0) {
 		let numArr = num.toString().split('');
-		console.log(numArr);
 		for (let i = numArr.length - 1; i >= 0; i--) {
 			ans.push(numArr[i]);
 		}
-		ans.splice(0, 1);
+		console.log(ans);
+		for (let j = 0; j < ans.length; j++) {
+			while (ans[j] == 0) {
+				ans.shift();
+			}
+		}
 	} else {
 		let numArr = num.toString().split('');
 		for (let i = numArr.length - 1; i >= 0; i--) {
@@ -519,4 +523,4 @@ const reverseNumber = num => {
 	return ans.join('');
 };
 
-console.log(reverseNumber(120));
+console.log(reverseNumber(1020));
