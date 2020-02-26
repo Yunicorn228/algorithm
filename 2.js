@@ -494,33 +494,53 @@
 
 // console.log(countingZero(100));
 // counting zero only 10% === 0
+// const reverseNumber = num => {
+// 	let ans = [];
+// 	if (num < 0) {
+// 		num = Math.abs(num).toString();
+// 		let numArr = num.split('');
+// 		for (let i = numArr.length - 1; i >= 0; i--) {
+// 			ans.push(numArr[i]);
+// 		}
+// 		ans.unshift('-');
+// 	} else if (num % 10 === 0) {
+// 		let numArr = num.toString().split('');
+// 		for (let i = numArr.length - 1; i >= 0; i--) {
+// 			ans.push(numArr[i]);
+// 		}
+// 		console.log(ans);
+// 		for (let j = 0; j < ans.length; j++) {
+// 			while (ans[j] == 0) {
+// 				ans.shift();
+// 			}
+// 		}
+// 	} else {
+// 		let numArr = num.toString().split('');
+// 		for (let i = numArr.length - 1; i >= 0; i--) {
+// 			ans.push(numArr[i]);
+// 		}
+// 	}
+// 	return ans.join('');
+// };
+
+// console.log(reverseNumber(1022));
+
 const reverseNumber = num => {
-	let ans = [];
-	if (num < 0) {
-		num = Math.abs(num).toString();
-		let numArr = num.split('');
-		for (let i = numArr.length - 1; i >= 0; i--) {
-			ans.push(numArr[i]);
-		}
-		ans.unshift('-');
-	} else if (num % 10 === 0) {
-		let numArr = num.toString().split('');
-		for (let i = numArr.length - 1; i >= 0; i--) {
-			ans.push(numArr[i]);
-		}
-		console.log(ans);
-		for (let j = 0; j < ans.length; j++) {
-			while (ans[j] == 0) {
-				ans.shift();
-			}
-		}
-	} else {
-		let numArr = num.toString().split('');
-		for (let i = numArr.length - 1; i >= 0; i--) {
-			ans.push(numArr[i]);
-		}
+	let x = Math.abs(num);
+	if (x.toString().split('').length > 32) {
+		return 0;
 	}
-	return ans.join('');
+	let arr = x
+		.toString()
+		.split('')
+		.reverse();
+	let ans = Number(arr.join(''));
+
+	if (num >= 0) {
+		return ans;
+	}
+	return -ans;
 };
 
-console.log(reverseNumber(1020));
+console.log(reverseNumber(-01800101));
+console.log(reverseNumber(-10100810));
