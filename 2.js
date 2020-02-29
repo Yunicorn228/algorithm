@@ -525,22 +525,50 @@
 
 // console.log(reverseNumber(1022));
 
-const reverseNumber = num => {
-	let x = Math.abs(num);
-	if (x.toString().split('').length > 32) {
-		return 0;
-	}
-	let arr = x
+// const reverseNumber = num => {
+// 	let x = Math.abs(num);
+// 	if (x.toString().split('').length > 32) {
+// 		return 0;
+// 	}
+// 	let arr = x
+// 		.toString()
+// 		.split('')
+// 		.reverse();
+// 	let ans = Number(arr.join(''));
+
+// 	if (num >= 0) {
+// 		return ans;
+// 	}
+// 	return -ans;
+// };
+
+// console.log(reverseNumber(-01800101));
+// console.log(reverseNumber(123456789987654381));
+// // const reverseNumber = num => {
+// // 	let numStr = num
+// 		.toString()
+// 		.split('')
+// 		.reverse()
+// 		.join('');
+// 	let result;
+// 	// console.log(numStr);
+// 	if (numStr.indexOf('-') === -1) {
+// 		return (result = Math.abs(Number(numStr)));
+// 	} else {
+// 		return (result = '-' + Math.abs(Number(numStr.replace('-', ''))));
+// 	}
+// };
+// console.log(reverseNumber(123123112122121223));
+
+var reverse = function(x) {
+	let y = Math.abs(x);
+	if (y.toString(2).length > 31) return 0;
+	let arr = y
 		.toString()
 		.split('')
 		.reverse();
-	let ans = Number(arr.join(''));
-
-	if (num >= 0) {
-		return ans;
-	}
-	return -ans;
+	if (Number(arr.join('')).toString(2).length > 31) return 0;
+	let z = Number(arr.join(''));
+	return x >= 0 ? z : -z;
 };
 
-console.log(reverseNumber(-01800101));
-console.log(reverseNumber(-10100810));
