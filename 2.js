@@ -569,5 +569,5 @@
 // 		.reverse();
 // 	if (Number(arr.join('')).toString(2).length > 31) return 0;
 // 	let z = Number(arr.join(''));
-	return x >= 0 ? z : -z;
-};
+// 	return x >= 0 ? z : -z;
+// };
