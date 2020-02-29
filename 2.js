@@ -560,15 +560,14 @@
 // };
 // console.log(reverseNumber(123123112122121223));
 
-var reverse = function(x) {
-	let y = Math.abs(x);
-	if (y.toString(2).length > 31) return 0;
-	let arr = y
-		.toString()
-		.split('')
-		.reverse();
-	if (Number(arr.join('')).toString(2).length > 31) return 0;
-	let z = Number(arr.join(''));
-	return x >= 0 ? z : -z;
-};
-
+// var reverse = function(x) {
+// 	let y = Math.abs(x);
+// 	if (y.toString(2).length > 31) return 0;
+// 	let arr = y
+// 		.toString()
+// 		.split('')
+// 		.reverse();
+// 	if (Number(arr.join('')).toString(2).length > 31) return 0;
+// 	let z = Number(arr.join(''));
+// 	return x >= 0 ? z : -z;
+// };
