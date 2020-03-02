@@ -472,12 +472,12 @@
 // counting zero only 10% === 0
 
 // const countingZero = num => {
-let count = 0;
-while (num > 0) {
-	count += Math.floor(num / 10);
-	num = num / 10;
-}
-return count;
+// let count = 0;
+// while (num > 0) {
+// 	count += Math.floor(num / 10);
+// 	num = num / 10;
+// }
+// return count;
 // };
 
 // console.log(countingZero(100));
