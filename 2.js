@@ -477,7 +477,7 @@
 // 		count += Math.floor(num / 10);
 // 		num = num / 10;
 // 	}
-// 	return count;
+return count;
 // };
 
 // console.log(countingZero(100));
