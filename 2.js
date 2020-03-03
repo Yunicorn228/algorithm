@@ -17,10 +17,10 @@
 // }
 // console.log(binar([1, 2, 3, 4, 5, 6, 7, 8], 9));
 
-// ----------prime
-function isPri(n) {
-  if (n < 2) return false;
-  var div = 2;
+// // ----------prime
+// function isPri(n) {
+//   if (n < 2) return false;
+//   var div = 2;
 
 //   while (n > div) {
 //     if (n % div == 0) {
