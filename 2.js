@@ -12,10 +12,10 @@
 //     } else {
 //       end = mid - 1;
 //     }
-//   }
-//   return false;
-// }
-// console.log(binar([1, 2, 3, 4, 5, 6, 7, 8], 9));
+  }
+  return false;
+}
+console.log(binar([1, 2, 3, 4, 5, 6, 7, 8], 9));
 
 // // ----------prime
 // function isPri(n) {
