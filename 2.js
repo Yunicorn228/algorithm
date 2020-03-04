@@ -268,19 +268,19 @@
 //   let j = 1;
 //   let ans = [];
 
-  while (i < arrA.length && j < arrB.length) {
-    if (a < b) {
-      ans.push(a);
-      a = arrA[i++];
-      i++;
-    } else {
-      ans.push(b);
-      b = arrB[i++];
-      j++;
-    }
-  }
-  return ans;
-};
+//   while (i < arrA.length && j < arrB.length) {
+//     if (a < b) {
+//       ans.push(a);
+//       a = arrA[i++];
+//       i++;
+//     } else {
+//       ans.push(b);
+//       b = arrB[i++];
+//       j++;
+//     }
+//   }
+//   return ans;
+// };
 
 // console.log(mergesortedarray([2, 5, 6, 9], [1, 2, 3, 29]));
 
