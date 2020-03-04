@@ -231,12 +231,12 @@
 
 // console.log(sameCollaps([1, 3, 3, 3, 1, 5, 6, 7, 8, 1]));
 
-// const fiborec = n => {
-//   if (n <= 1) {
-//     return 1;
-//   } else {
-//     return fiborec(n - 1) + fiborec(n - 2);
-//   }
+const fiborec = n => {
+  if (n <= 1) {
+    return 1;
+  } else {
+    return fiborec(n - 1) + fiborec(n - 2);
+  }
 // };
 
 // console.log(fiborec(12));
