@@ -250,11 +250,11 @@
 //     return a;
 //   }
 
-//   let ans = [];
-//   for (let i = 1; i < a; i++) {
-//     if (a % i === 0 && b % i === 0) {
-//       ans.push(i);
-//     }
+  let ans = [];
+  for (let i = 1; i < a; i++) {
+    if (a % i === 0 && b % i === 0) {
+      ans.push(i);
+    }
 //   }
 //   return ans[ans.length - 1];
 // };
