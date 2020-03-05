@@ -263,10 +263,10 @@
 
 // const mergesortedarray = (arrA, arrB) => {
 //   let a = arrA[0];
-//   let b = arrB[0];
-//   let i = 1;
-//   let j = 1;
-//   let ans = [];
+  let b = arrB[0];
+  let i = 1;
+  let j = 1;
+  let ans = [];
 
 //   while (i < arrA.length && j < arrB.length) {
 //     if (a < b) {
