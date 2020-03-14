@@ -261,12 +261,12 @@
 
 // console.log(greatestCommonDivisor(-69, 169));
 
-// const mergesortedarray = (arrA, arrB) => {
-//   let a = arrA[0];
-  let b = arrB[0];
-  let i = 1;
-  let j = 1;
-  let ans = [];
+// // const mergesortedarray = (arrA, arrB) => {
+// //   let a = arrA[0];
+//   let b = arrB[0];
+//   let i = 1;
+//   let j = 1;
+//   let ans = [];
 
 //   while (i < arrA.length && j < arrB.length) {
 //     if (a < b) {
@@ -571,3 +571,18 @@
 // 	let z = Number(arr.join(''));
 // 	return x >= 0 ? z : -z;
 // };
+// const solution = numbers => {
+// 	if (numbers.length == 0) {
+// 		return 0;
+// 	}
+// 	let ans = 0;
+// 	for (let i = 0; i < numbers.length; i++) {
+// 		console.log(numbers[i] > ans);
+// 		if (numbers[i] > ans) {
+// 			ans = numbers[i];
+// 		}
+// 	}
+// 	return ans;
+// };
+
+// console.log(solution([1, 2, 3, 4, 7, 5, 2]));
