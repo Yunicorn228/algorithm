@@ -579,10 +579,10 @@
 // 	for (let i = 0; i < numbers.length; i++) {
 // 		console.log(numbers[i] > ans);
 // 		if (numbers[i] > ans) {
-// 			ans = numbers[i];
-// 		}
-// 	}
-// 	return ans;
-// };
+			ans = numbers[i];
+		}
+	}
+	return ans;
+};
 
 console.log(solution([1, 2, 3, 4, 7, 5, 2]));
