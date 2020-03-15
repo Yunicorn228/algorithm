@@ -585,4 +585,4 @@
 	return ans;
 };
 
-console.log(solution([1, 2, 3, 4, 7, 5, 2]));
+// console.log(solution([1, 2, 3, 4, 7, 5, 2]));
