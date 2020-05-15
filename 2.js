@@ -284,24 +284,24 @@
 
 // console.log(mergesortedarray([2, 5, 6, 9], [1, 2, 3, 29]));
 
-// const reverseStr = str => {
-//   let answer = "";
-//   for (let i = str.length - 1; i >= 0; i--) {
-//     answer += str[i];
-//   }
-//   return answer;
+// const reverseStr = (str) => {
+// 	let answer = '';
+// 	for (let i = str.length - 1; i >= 0; i--) {
+// 		answer += str[i];
+// 	}
+// 	return answer;
 // };
 
-// console.log(reverseStr("bao bao zi la"));
-// const reverseWord = str => {
-//   let wordArr = str.split(" ");
-//   const ans = wordArr.map(word => {
-//     return reverseStr(word);
-//   });
-//   return ans.join(" ");
+// // console.log(reverseStr('bao bao zi la'));
+// const reverseWord = (str) => {
+// 	let wordArr = str.split(' ');
+// 	const ans = wordArr.map((word) => {
+// 		return reverseStr(word);
+// 	});
+// 	return ans.join(' ');
 // };
 
-// console.log(reverseWord("bao bao zi la"));
+// console.log(reverseWord('bao bao zi la'));
 // const reverseWord = str => {
 //   words = str.split(" ");
 //   answer = [];
@@ -586,3 +586,228 @@
 // };
 
 // console.log(solution([1, 2, 3, 4, 7, 5, 2]));
+
+// const agentRandomID = () => {
+// 	const num = Math.floor(0 + Math.random() * 9999).toString();
+// 	const digit = 4;
+// 	let missing;
+// 	console.log(num.length);
+
+// 	if (num.length < digit) {
+// 		missing = digit - num.length;
+// 		console.log(missing);
+// 		return missing * '0' + num;
+// 	}
+// 	return num;
+// };
+
+// console.log(agentRandomID());
+
+// const x = () => {
+// 	return (Math.floor(Math.random() * 10000) + 10000).toString().substring(1);
+// };
+
+// console.log(x());
+
+// const isPri = (num) => {
+// 	let div = 2;
+
+// 	while (num > div) {
+// 		if (num % div == 0) {
+// 			return false;
+// 		} else {
+// 			div++;
+// 		}
+// 	}
+// 	return true;
+// };
+
+// console.log(isPri());
+
+// const priFac = (num) => {
+// 	let facs = [];
+// 	let div = 2;
+
+// 	while (num > div) {
+// 		if (num % div == 0) {
+// 			facs.push(div);
+// 			num = num / div;
+// 		} else {
+// 			div++;
+// 		}
+// 	}
+// 	return facs;
+// };
+
+// console.log(priFac(21));
+
+// const fib = (num) => {
+// 	let fibo = [0, 1];
+
+// 	if (num <= 2) return 1;
+
+// 	for (let i = 2; i <= num; i++) {
+// 		fibo[i] = fibo[i - 1] + fibo[i - 2];
+// 	}
+// 	return fibo[num];
+// };
+
+// console.log(fib());
+
+// const fib = (n) => {
+// 	if (n <= 1) {
+// 		return n;
+// 	} else {
+// 		return fib(n - 1) + fib(n - 2);
+// 	}
+// };
+// console.log(fib(12));
+
+// const greatestCommonDivisor = (a, b) => {
+// 	let div = 2;
+// 	let grtdiv = 1;
+
+// 	if (a < 2 || b < 2) {
+// 		return 1;
+// 	}
+
+// 	while (a >= div && b >= div) {
+// 		if (a % div == 0 && b % div == 0) {
+// 			grtdiv = div;
+// 		}
+// 		div++;
+// 	}
+// 	return grtdiv;
+// };
+
+// console.log(greatestCommonDivisor(69, 69));
+
+// const grtCommonDiv = (a, b) => {
+// 	if (b == 0) {
+// 		return a;
+// 	}
+// 	return grtCommonDiv(b, a % b);
+// };
+
+// console.log(grtCommonDiv(144, 10));
+
+// const removeDup = (arr) => {
+// 	let exist = {},
+// 		ans = [],
+// 		elm;
+
+// 	for (let i = 0; i < arr.length; i++) {
+// 		elm = arr[i];
+// 		if (!exist[elm]) {
+// 			ans.push(elm);
+// 			exist[elm] = true;
+// 		}
+// 	}
+// 	return ans;
+// };
+
+// console.log(removeDup([1, 1, 3, 3, 1, 5, 6, 7, 8, 1]));
+
+// const mergesortedarray = (a, b) => {
+// 	let ans = [],
+// 		aElm = a[0],
+// 		bElm = b[0],
+// 		i = 1,
+// 		j = 1;
+
+// 	if (a.length == 0) {
+// 		return b;
+// 	}
+// 	if (b.length == 0) {
+// 		return a;
+// 	}
+
+// 	while (aElm || bElm) {
+// 		if ((aElm && !bElm) || aElm < bElm) {
+// 			ans.push(aElm);
+// 			aElm = a[i++];
+// 		} else {
+// 			ans.push(bElm);
+// 			bElm = b[j++];
+// 		}
+// 	}
+// 	return ans;
+// };
+
+// console.log(mergesortedarray([2, 5, 6, 9], [1, 2, 3, 29, 20, 30, 40]));
+
+// const swap = (a, b) => {
+// 	console.log(a, b);
+// 	a = a - b;
+// 	b = b + a;
+// 	a = b - a;
+// 	console.log(a, b);
+// };
+// console.log(swap(5, 3));
+
+// const reverseStr = (str) => {
+// 	let ans = '';
+// 	for (let i = str.length - 1; i >= 0; i--) {
+// 		ans += str[i];
+// 	}
+// 	return ans;
+// };
+
+// console.log(reverseStr('zhao zhi yuan'));
+
+// const firstNonRe = (str) => {
+// 	let charCount = {},
+// 		char;
+// 	for (let i = 0; i < str.length; i++) {
+// 		char = str[i];
+// 		if (charCount[char]) {
+// 			charCount[char]++;
+// 		} else {
+// 			charCount[char] = 1;
+// 		}
+// 	}
+// 	const ans = Object.entries(charCount).find((arr) => arr[1] == 1);
+// 	return ans[0];
+// };
+
+// console.log(firstNonRe('the quick brown fox jumps then quickly blow air'));
+
+// const grtcomdiv = (a, b) => {
+// 	if (a < 2 || b < 2) {
+// 		return 1;
+// 	}
+
+// 	let ans = 1,
+// 		grtdiv = 2;
+
+// 	while (a >= grtdiv && b >= grtdiv) {
+// 		if (a % grtdiv == 0 && b % grtdiv == 0) {
+// 			ans = grtdiv;
+// 		}
+// 		grtdiv++;
+// 	}
+// 	return ans;
+// };
+
+// console.log(grtcomdiv(7, 21));
+
+// const removeDup = (str) => {
+// 	let charCount = {},
+// 		char,
+// 		ans = [];
+
+// 	for (let i = 0; i <= str.length - 1; i++) {
+// 		char = str[i];
+// 		if (charCount[char]) {
+// 			charCount[char]++;
+// 		} else {
+// 			charCount[char] = 1;
+// 		}
+// 	}
+// 	for (let j in charCount) {
+// 		if (charCount[j] == 1) ans.push(j);
+// 	}
+// 	return ans.join('');
+// };
+
+// console.log(removeDup('Learn more javascript dude'));
