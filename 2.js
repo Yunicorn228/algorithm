@@ -811,3 +811,36 @@
 // };
 
 // console.log(removeDup('Learn more javascript dude'));
+
+// const isPalindrome = (str) => {
+// 	for (let i = 0; i < str.length - 1; i++) {
+// 		if (str[i] !== str[str.length - 1 - i]) {
+// 			return false;
+// 		}
+// 	}
+// 	return true;
+// };
+// console.log(isPalindrome('racec'));
+
+// const random = (a, b) => {
+// 	return Math.floor(Math.random() * (b - a) + a);
+// };
+
+// console.log(random(10, 15));
+
+// const twoSum = (arr, sum) => {
+// 	let numCount = {},
+// 		diff;
+
+// 	for (let i = 0; i < arr.length - 1; i++) {
+// 		diff = sum - arr[i];
+// 		if (numCount[diff]) {
+// 			return true;
+// 		} else {
+// 			numCount[arr[i]] = true;
+// 		}
+// 	}
+// 	return false;
+// };
+
+// console.log(twoSum([6, 4, 3, 2, 1, 7], 17));
