@@ -188,14 +188,14 @@
 
 // console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8], 9));
 
-// const sameCollaps = arr => {
-//   const ans = [];
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] !== arr[i - 1]) {
-//       ans.push(arr[i]);
-//     }
-//   }
-//   return ans;
+// const sameCollaps = (arr) => {
+// 	const ans = [];
+// 	for (let i = 0; i < arr.length; i++) {
+// 		if (arr[i] !== arr[i - 1]) {
+// 			ans.push(arr[i]);
+// 		}
+// 	}
+// 	return ans;
 // };
 
 // console.log(sameCollaps([1, 3, 3, 3, 1, 5, 6, 7, 8, 1]));
@@ -844,3 +844,20 @@
 // };
 
 // console.log(twoSum([6, 4, 3, 2, 1, 7], 17));
+
+// const points = {
+// 	0: [4, 6],
+// 	1: [6, 8],
+// };
+
+// const routes = (start, jumps) => {
+// 	const startingPoint = points[start];
+// 	const arr = Object.entries(points);
+// 	for (let i = 0; i < arr.length - 1; i++) {}
+// };
+
+const arr1 = [1, 2, 3, 4];
+const arr2 = [5, 6, 7, 8, 9];
+
+const arr3 = [...arr1, ...arr2];
+console.log(arr3);
