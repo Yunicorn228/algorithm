@@ -708,33 +708,34 @@
 
 // console.log(removeDup([1, 1, 3, 3, 1, 5, 6, 7, 8, 1]));
 
-// const mergesortedarray = (a, b) => {
-// 	let ans = [],
-// 		aElm = a[0],
-// 		bElm = b[0],
-// 		i = 1,
-// 		j = 1;
+const mergesortedarray = (a, b) => {
+	let ans = [],
+		i = 0,
+		j = 0,
+		k = 0;
 
-// 	if (a.length == 0) {
-// 		return b;
-// 	}
-// 	if (b.length == 0) {
-// 		return a;
-// 	}
+	while (i < a.length && j < b.length) {
+		if (a[i] > b[j]) {
+			ans.push(b[j]);
+			j++;
+		} else {
+			ans.push(a[i]);
+			i++;
+		}
+	}
+	while (i < a.length) {
+		ans.push(a[i]);
+		i++;
+	}
+	while (j < b.length) {
+		ans.push(b[j]);
+		j++;
+	}
 
-// 	while (aElm || bElm) {
-// 		if ((aElm && !bElm) || aElm < bElm) {
-// 			ans.push(aElm);
-// 			aElm = a[i++];
-// 		} else {
-// 			ans.push(bElm);
-// 			bElm = b[j++];
-// 		}
-// 	}
-// 	return ans;
-// };
+	return ans;
+};
 
-// console.log(mergesortedarray([2, 5, 6, 9], [1, 2, 3, 29, 20, 30, 40]));
+console.log(mergesortedarray([2, 5, 6, 9], [1, 2, 3, 29, 20, 30, 40]));
 
 // const swap = (a, b) => {
 // 	console.log(a, b);
@@ -856,8 +857,8 @@
 // 	for (let i = 0; i < arr.length - 1; i++) {}
 // };
 
-const arr1 = [1, 2, 3, 4];
-const arr2 = [5, 6, 7, 8, 9];
+// const arr1 = [1, 2, 3, 4];
+// const arr2 = [5, 6, 7, 8, 9];
 
-const arr3 = [...arr1, ...arr2];
-console.log(arr3);
+// const arr3 = [...arr1, ...arr2];
+// console.log(arr3);
